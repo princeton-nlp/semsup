@@ -1,0 +1,26 @@
+seed: 42
+
+model:
+  args:
+    pretrained_model: true
+    lr: 1e-4
+    adam_epsilon: 1e-6
+    weight_decay: 0.01
+
+data:
+  num_workers: 1
+
+logger:
+  project: "semsup"
+
+checkpoint:
+  save_last: true
+  monitor: val_acc
+  mode: max
+  dirpath: ../checkpoints/cifar
+
+trainer:
+  fast_dev_run: false
+  gpus: 1
+  max_epochs: 100
+  log_every_n_steps: 1000

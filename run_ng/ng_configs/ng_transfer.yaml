@@ -1,0 +1,30 @@
+ModelCls: BertRCV1toNG
+DataCls: NewsgroupsDataModule
+seed: 42
+
+data:
+  args:
+    input_max_len: 512
+    input_tokenizer: prajjwal1/bert-small
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/newsgroups/combined_ng_manual_train.labels
+    val_label_json: ../class_descrs/newsgroups/combined_ng_manual_val.labels
+    cache_dir: "../data_cache"
+  num_workers: 1
+  batch_size: 32
+
+logger:
+  project: "contclass"
+  group: newsgroups
+
+checkpoint:
+  monitor: val_acc
+  mode: max
+  save_last: true
+  dirpath: ../checkpoints/ng
+
+trainer:
+  fast_dev_run: false
+  gpus: 1
+  max_epochs: 100
+  log_every_n_steps: 1000

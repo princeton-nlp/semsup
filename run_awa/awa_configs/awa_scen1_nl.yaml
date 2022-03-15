@@ -1,0 +1,16 @@
+ModelCls: ResNetContClass
+DataCls: AWADataModule
+
+name: awa_nl
+
+data:
+  args:
+    label_max_len: 128
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/awa/google_awa_manual_train.labels
+    val_label_json: ../class_descrs/awa/google_awa_manual_val.labels
+
+model:
+  args:
+    label_model: prajjwal1/bert-small
+    image_type: awa

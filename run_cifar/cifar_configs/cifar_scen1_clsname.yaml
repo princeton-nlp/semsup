@@ -1,0 +1,15 @@
+ModelCls: ResNetContClass
+DataCls: CIFAR100DataModule
+
+seed: 42
+name: cifar_cc_clsname
+
+model:
+  args:
+    label_model: prajjwal1/bert-small
+
+data:
+  args:
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/cifar/cifar_classnames_notemplate.labels
+    cache_dir: "../data_cache"

@@ -1,0 +1,16 @@
+ModelCls: ResNetBaseline
+DataCls: CIFAR100DataModule
+
+seed: 42
+name: cifar_base
+
+model:
+  args:
+    num_classes: 100
+    
+data:
+  args:
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/cifar/combined_cifar100_manual_train.labels
+    val_label_json: ../class_descrs/cifar/combined_cifar100_manual_val.labels
+    cache_dir: "../data_cache"

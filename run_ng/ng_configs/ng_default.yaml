@@ -1,0 +1,28 @@
+seed: 42
+
+model:
+  args:
+    pretrained_model: true
+    model: prajjwal1/bert-small
+    lr: 2e-5
+
+data:
+  args:
+    input_max_len: 512
+  num_workers: 1
+  batch_size: 32
+
+logger:
+  project: "semsup"
+
+checkpoint:
+  monitor: val_acc
+  mode: max
+  save_last: true
+  dirpath: ../checkpoints/ng
+
+trainer:
+  fast_dev_run: false
+  gpus: 1
+  max_epochs: 100
+  log_every_n_steps: 1000

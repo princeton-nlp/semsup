@@ -1,0 +1,16 @@
+ModelCls: ResNetContClass
+DataCls: CIFARSuperClassDM
+
+seed: 42
+name: cifar_super
+
+model:
+  args:
+    label_model: prajjwal1/bert-small
+
+data:
+  args:
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/cifar/combined_cifar100_manual_train.labels
+    val_label_json: ../class_descrs/cifar/google_cifar_super_manual_train.labels
+    cache_dir: "../data_cache"

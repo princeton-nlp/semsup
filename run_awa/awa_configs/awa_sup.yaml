@@ -1,0 +1,13 @@
+ModelCls: ResNetBaseline
+DataCls: AWADataModule
+
+name: awa_base
+
+model:
+  args:
+    num_classes: 50
+
+data:
+  args:
+    train_label_json: ../class_descrs/awa/large_files/awa_deep_samp50_perm25_train.labels
+    val_label_json: ../class_descrs/awa/large_files/awa_deep_samp50_perm25_val.labels

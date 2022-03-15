@@ -1,0 +1,15 @@
+ModelCls: ResNetContClass
+DataCls: AWAHeldoutDM
+name: awa_heldout_clsname
+
+seed: 42
+
+model:
+  args:
+    label_model: prajjwal1/bert-small
+
+data:
+  args:
+    label_max_len: 64
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/awa/awa_clsnames.labels

@@ -1,0 +1,9 @@
+ModelCls: ResNetContClass
+DataCls: AWADataModule
+
+name: awa_cc_bov
+
+data:
+  args:
+    train_label_json: ../class_descrs/awa/large_files/awa_deep_samp50_perm25_train_bov.labels
+    val_label_json: ../class_descrs/awa/large_files/awa_deep_samp50_perm25_val_bov.labels

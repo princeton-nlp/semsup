@@ -1,0 +1,16 @@
+ModelCls: BertContClass
+DataCls: NewsgroupsDataModule
+
+name: ng_cc
+
+model:
+  args:
+    label_model: prajjwal1/bert-small
+
+data:
+  args:
+    input_tokenizer: prajjwal1/bert-small
+    label_tokenizer: prajjwal1/bert-small
+    train_label_json: ../class_descrs/newsgroups/combined_ng_manual_train.labels
+    val_label_json: ../class_descrs/newsgroups/combined_ng_manual_val.labels
+    cache_dir: "../data_cache"
