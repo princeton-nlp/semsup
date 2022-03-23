@@ -1,4 +1,4 @@
-ModelCls: ResNetContClass
+ModelCls: ResNetSemSup
 DataCls: AWADataModule
 
 name: awa_nl

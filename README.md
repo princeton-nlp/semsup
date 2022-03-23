@@ -41,5 +41,21 @@ The `SemSupModel` in `semsup/model/core.py` inherits from `pl.LightningModule` a
 
 The class descriptions `.labels` files are a list of jsons with `"text"` and `"label"` keys. The label be one of the labels provided in the `train_classes` and `val_classes` variables in `SemSupDataArgs`.
 
+### Running in Colab
+(For AWA, CIFAR, Newsgroups). To run the code in Google Colab, make sure to run the following cell first to setup your environment.
+```
+!git clone https://github.com/princeton-nlp/semsup.git
+%cd semsup/
+!pip uninstall --yes torchtext torchaudio # not compatible with our version of torch
+!pip install -e .
+!bash download.sh
+!mkdir data_cache
+# RESTART RUNTIME TO UPDATE NEWLY INSTALLED MODULES
+```
+You should now be able to run the scripts (make sure to `cd` to the folder) for example:
+```
+%cd /content/semsup/run_ng
+!bash unit_test_ng.sh
+```
 ### License
 MIT

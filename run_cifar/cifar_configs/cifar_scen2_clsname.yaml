@@ -1,4 +1,4 @@
-ModelCls: ResNetContClass
+ModelCls: ResNetSemSup
 DataCls: CIFARHeldoutDM
 
 seed: 42

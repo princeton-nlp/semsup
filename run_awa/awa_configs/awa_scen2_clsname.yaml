@@ -1,4 +1,4 @@
-ModelCls: ResNetContClass
+ModelCls: ResNetSemSup
 DataCls: AWAHeldoutDM
 name: awa_heldout_clsname
 

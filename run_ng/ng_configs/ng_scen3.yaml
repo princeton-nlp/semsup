@@ -1,4 +1,4 @@
-ModelCls: BertContClass
+ModelCls: BertSemSup
 DataCls: NewsgroupsSuperClassDM
 
 name: ng_super

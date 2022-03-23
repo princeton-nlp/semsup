@@ -1,4 +1,4 @@
-ModelCls: BertContClass
+ModelCls: BertSemSup
 DataCls: NewsgroupsDataModule
 
 name: ng_cc_clsname

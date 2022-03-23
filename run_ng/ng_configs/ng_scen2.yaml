@@ -1,4 +1,4 @@
-ModelCls: BertContClass
+ModelCls: BertSemSup
 DataCls: NewsgroupsHeldoutDM
 
 name: ng_heldout
