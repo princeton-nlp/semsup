@@ -3,7 +3,7 @@
 [**Website**](https://sites.google.com/princeton.edu/semantic-supervision/) |
 [**Paper**](https://arxiv.org/abs/2202.13100)
 
-https://user-images.githubusercontent.com/47610569/155899586-79101f69-d0a6-4ac9-a0ec-5c4652330876.mov
+![semsup](https://user-images.githubusercontent.com/8196527/200193827-9f1fb40b-35f3-4e6b-a685-0005319b6bbc.gif)
 
 ## Setup
 First clone the repository and install dependencies:
