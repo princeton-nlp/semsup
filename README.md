@@ -19,9 +19,9 @@ bash download.sh
 mkdir data_cache
 ```
 
-Experiments were run using `python 3.9.7` and `CUDA toolkit 11.1`.
+Experiments in our paper were run using `python 3.9.7` and `CUDA toolkit 11.1`.
 
-## Running
+## How to run the code
 Scripts and config files to train and evaluate models on AWA2, CIFAR and 20Newsgroups are found in the folders `run_{awa, cifar, ng}`. Training commands are found in the bash scripts `run_{dataset}_{model}.sh` in each folder. Each config file has a `scen{1,2,3}` in the file name to indicate which scenario the config is for (see the paper for details on the scenarios). Run each script inside the respective folder. For example:
 ```
 cd run_cifar
@@ -34,7 +34,7 @@ Dataset downloading to the `data_cache` directory is automatically handled. Test
 Obtaining RCV1 data and running RCV1 code require additional instructions that can be found [here](run_rcv1/RCV1_README.md).
 
 ## Notes
-### Building on Code
+### Building on this code
 We use `pytorch-lightning` (except for RCV1). The `SemSupDataModule` class in `semsup/data/core.py` inherits from `pl.LightningDataModule` and handles the tokenization, caching, and sampling of class descriptions. All data modules in `semsup/data/{awa, cifar, newsgroups}` inherit from `SemSupDataModule`.
 
 The `SemSupModel` in `semsup/model/core.py` inherits from `pl.LightningModule` and constructs the output matrix. All SemSup models inherit from this class. Together, the two base `SemSup` classes allow for easy conversion of any supervised problem into a `SemSup` approach.
